@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iPovLGkQE0yhWZuQGr92fuKaYvcqIWNuVVjmMbPZfnFSxHUxIixUS4uzZzEgM7zEjguzz3+msOgYn12+g/aWkw==",
+  "success": true,
+  "projectFilePath": "D:\\UTM\\Anul 2\\Semestrul 4\\PBL\\project\\graphics\\GraphicsForLDSL\\GraphicsForLDSL.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\victo\\.nuget\\packages\\nakov.turtlegraphics\\2.0.2.1\\nakov.turtlegraphics.2.0.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
