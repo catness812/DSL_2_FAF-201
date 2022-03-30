@@ -18,3 +18,22 @@ D:\UTM\Anul 2\Semestrul 4\PBL\project\graphics\GraphicsForLDSL\obj\Debug\net6.0-
 D:\UTM\Anul 2\Semestrul 4\PBL\project\graphics\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.pdb
 D:\UTM\Anul 2\Semestrul 4\PBL\project\graphics\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.genruntimeconfig.cache
 D:\UTM\Anul 2\Semestrul 4\PBL\project\graphics\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.Form2.resources
+D:\dsl graphiics\grap\GraphicsForLDSL\bin\Debug\net6.0-windows\GraphicsForLDSL.exe
+D:\dsl graphiics\grap\GraphicsForLDSL\bin\Debug\net6.0-windows\GraphicsForLDSL.deps.json
+D:\dsl graphiics\grap\GraphicsForLDSL\bin\Debug\net6.0-windows\GraphicsForLDSL.runtimeconfig.json
+D:\dsl graphiics\grap\GraphicsForLDSL\bin\Debug\net6.0-windows\GraphicsForLDSL.dll
+D:\dsl graphiics\grap\GraphicsForLDSL\bin\Debug\net6.0-windows\ref\GraphicsForLDSL.dll
+D:\dsl graphiics\grap\GraphicsForLDSL\bin\Debug\net6.0-windows\GraphicsForLDSL.pdb
+D:\dsl graphiics\grap\GraphicsForLDSL\bin\Debug\net6.0-windows\Nakov.TurtleGraphics.dll
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.csproj.AssemblyReference.cache
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.csproj.GenerateResource.cache
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.GeneratedMSBuildEditorConfig.editorconfig
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.AssemblyInfoInputs.cache
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.AssemblyInfo.cs
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.csproj.CoreCompileInputs.cache
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.csproj.CopyComplete
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.dll
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\ref\GraphicsForLDSL.dll
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.pdb
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.genruntimeconfig.cache
+D:\dsl graphiics\grap\GraphicsForLDSL\obj\Debug\net6.0-windows\GraphicsForLDSL.Form2.resources
