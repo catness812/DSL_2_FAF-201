@@ -1,6 +1,6 @@
-C:\Users\mariu\Desktop\LSystemProject\LSystem\LSystem\obj\Debug\net6.0-windows\DslLexer.cs
-C:\Users\mariu\Desktop\LSystemProject\LSystem\LSystem\obj\Debug\net6.0-windows\DslParser.cs
-C:\Users\mariu\Desktop\LSystemProject\LSystem\LSystem\obj\Debug\net6.0-windows\DslListener.cs
-C:\Users\mariu\Desktop\LSystemProject\LSystem\LSystem\obj\Debug\net6.0-windows\DslBaseListener.cs
-C:\Users\mariu\Desktop\LSystemProject\LSystem\LSystem\obj\Debug\net6.0-windows\DslVisitor.cs
-C:\Users\mariu\Desktop\LSystemProject\LSystem\LSystem\obj\Debug\net6.0-windows\DslBaseVisitor.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslLexer.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslParser.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslListener.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslBaseListener.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslVisitor.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslBaseVisitor.cs

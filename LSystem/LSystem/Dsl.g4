@@ -4,14 +4,19 @@ program: line* EOF;
 
 line: function;
 
-function: freestyle;
+function: freestyle | lstree | lsdragon;
 
-freestyle: 'ls freestyle' '(' '"' axiom '"' ',' applies ',' angle ',' length ',' rules ')' ';';
+lstree: 'ls tree(' applies ');';
+
+lsdragon: 'ls dragon(' applies ');';
+
+freestyle: 'ls freestyle' '(' '"' axiom '"' ',' applies ',' angle ',' length ',' rules ',' color ');';
 axiom: AXIOM;
 applies: NUM;
 angle: NUM;
 length: NUM;
 rules: task | rules ',' rules;
+color: AXIOM;
 task: '{' '"' AXIOM '"' ':' '"' path '"' '}';
 path
     : axiom

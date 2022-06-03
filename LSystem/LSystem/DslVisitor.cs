@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Antlr4.Runtime.Misc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +9,10 @@ namespace LSystem
 {
     public class DslVisitor : DslBaseVisitor<object?>
     {
-        private Dictionary<int, (string axiom, int applies, int angle, int length, StringBuilder rule)> freestyles = new();
+        private Dictionary<int, (string axiom, int applies, int angle, int length, StringBuilder rule, Color color)> freestyles = new();
         public override object? VisitFreestyle(DslParser.FreestyleContext context)
         {
-            (string axiom, int applies, int angle, int length, StringBuilder rule) freestyle;
+            (string axiom, int applies, int angle, int length, StringBuilder rule, Color color) freestyle;
             // axiom -> starting point
             freestyle.axiom = context.axiom().GetText();
 
@@ -37,10 +38,21 @@ namespace LSystem
             var rules = context.rules().GetText();
             freestyle.rule = Parse(freestyle.axiom, freestyle.applies, rules);
 
+            // color
+            var color = context.color();
+            if (color != null)
+            {
+                freestyle.color = Color.FromName(color.GetText());
+            }
+            else
+            {
+                freestyle.color = Color.Blue;
+            }
+
             // add the current valid instance of freestyle function (its values) to dictionary
             freestyles.Add(freestyles.Count(), freestyle);
 
-            return new ValueTuple<int, int, int, StringBuilder>(freestyle.applies, freestyle.angle, freestyle.length, freestyle.rule);
+            return new ValueTuple<int, int, int, StringBuilder, Color>(freestyle.applies, freestyle.angle, freestyle.length, freestyle.rule, freestyle.color);
             ;
         }
 
@@ -104,6 +116,12 @@ namespace LSystem
                 // replace recursively symbols from given string based on already changed sb and value of "applies"
                 return ReplaceRecursively(path, --counter);
             }
+        }
+
+        public override object VisitLstree(DslParser.LstreeContext context)
+        {
+            Console.WriteLine(context.GetText());
+            return base.VisitLstree(context);
         }
     }
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from C:\Users\mariu\Desktop\LSystemProject\LSystem\LSystem\Dsl.g4 by ANTLR 4.6.6
+// Generated from S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\Dsl.g4 by ANTLR 4.6.6
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -63,6 +63,28 @@ public interface IDslListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitFunction([NotNull] DslParser.FunctionContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.lstree"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLstree([NotNull] DslParser.LstreeContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.lstree"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLstree([NotNull] DslParser.LstreeContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.lsdragon"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLsdragon([NotNull] DslParser.LsdragonContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.lsdragon"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLsdragon([NotNull] DslParser.LsdragonContext context);
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="DslParser.freestyle"/>.
@@ -129,6 +151,17 @@ public interface IDslListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitRules([NotNull] DslParser.RulesContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.color"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterColor([NotNull] DslParser.ColorContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.color"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitColor([NotNull] DslParser.ColorContext context);
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="DslParser.task"/>.

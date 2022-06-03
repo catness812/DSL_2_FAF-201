@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mariu\\Desktop\\DSL\\LSystem\\LSystem\\LSystem.csproj": {}
+    "S:\\MB\\Univer\\ANUL II\\Classes II\\DDSL\\LSystemParser\\LSystem\\LSystem\\LSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mariu\\Desktop\\DSL\\LSystem\\LSystem\\LSystem.csproj": {
+    "S:\\MB\\Univer\\ANUL II\\Classes II\\DDSL\\LSystemParser\\LSystem\\LSystem\\LSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mariu\\Desktop\\DSL\\LSystem\\LSystem\\LSystem.csproj",
+        "projectUniqueName": "S:\\MB\\Univer\\ANUL II\\Classes II\\DDSL\\LSystemParser\\LSystem\\LSystem\\LSystem.csproj",
         "projectName": "LSystem",
-        "projectPath": "C:\\Users\\mariu\\Desktop\\DSL\\LSystem\\LSystem\\LSystem.csproj",
+        "projectPath": "S:\\MB\\Univer\\ANUL II\\Classes II\\DDSL\\LSystemParser\\LSystem\\LSystem\\LSystem.csproj",
         "packagesPath": "C:\\Users\\mariu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mariu\\Desktop\\DSL\\LSystem\\LSystem\\obj\\",
+        "outputPath": "S:\\MB\\Univer\\ANUL II\\Classes II\\DDSL\\LSystemParser\\LSystem\\LSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "S:\\Software\\Microsoft\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -77,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

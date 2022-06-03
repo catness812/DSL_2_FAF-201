@@ -46,3 +46,30 @@ C:\Users\mariu\Desktop\DSL\LSystem\LSystem\obj\Debug\net6.0-windows\refint\LSyst
 C:\Users\mariu\Desktop\DSL\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.pdb
 C:\Users\mariu\Desktop\DSL\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.genruntimeconfig.cache
 C:\Users\mariu\Desktop\DSL\LSystem\LSystem\obj\Debug\net6.0-windows\ref\LSystem.dll
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.csproj.AssemblyReference.cache
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslLexer.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslParser.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslListener.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslBaseListener.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslVisitor.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\DslBaseVisitor.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.csproj.Antlr4GeneratedCodeFileListAbsolute.txt
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.Form1.resources
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.csproj.GenerateResource.cache
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.GeneratedMSBuildEditorConfig.editorconfig
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.AssemblyInfoInputs.cache
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.AssemblyInfo.cs
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.csproj.CoreCompileInputs.cache
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.dll
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\refint\LSystem.dll
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.pdb
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\bin\Debug\net6.0-windows\LSystem.exe
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\bin\Debug\net6.0-windows\LSystem.deps.json
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\bin\Debug\net6.0-windows\LSystem.runtimeconfig.json
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\bin\Debug\net6.0-windows\LSystem.dll
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\bin\Debug\net6.0-windows\LSystem.pdb
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\bin\Debug\net6.0-windows\Antlr4.Runtime.dll
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\bin\Debug\net6.0-windows\Nakov.TurtleGraphics.dll
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.csproj.CopyComplete
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\LSystem.genruntimeconfig.cache
+S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\obj\Debug\net6.0-windows\ref\LSystem.dll

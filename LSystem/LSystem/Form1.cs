@@ -8,8 +8,9 @@ namespace LSystem
         private readonly float _angle;
         private readonly int _length;
         private readonly StringBuilder _rule;
+        private readonly Color _color;
 
-        public Form1((int applies, int angle, int length, StringBuilder rule) function)
+        public Form1((int applies, int angle, int length, StringBuilder rule, Color color) function)
         {
             InitializeComponent();
             Activated += Form2_Activated;
@@ -18,13 +19,14 @@ namespace LSystem
             _angle = function.angle;
             _length = function.length;
             _rule = function.rule;
+            _color = function.color;
         }
 
         private void Form2_Activated(object? sender, EventArgs e)
         {
             Turtle.Init();
             Turtle.PenSize = 2;
-            Turtle.PenColor = Color.DarkGreen;
+            Turtle.PenColor = _color;
             Turtle.ShowTurtle = false;
             Turtle.PenUp();
             Turtle.MoveTo(0, -300);

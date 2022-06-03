@@ -16,7 +16,7 @@ namespace LSystem
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            var path = @"C:\Users\mariu\Desktop\LSystemProject\LSystem\LSystem\test.dsl";
+            var path = @"S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\test.dsl";
             var fileContent = File.ReadAllText(path);
 
             var inputStream = new AntlrInputStream(fileContent);
@@ -28,6 +28,7 @@ namespace LSystem
             visitor.Visit(context);
 
             List<object> result = DslParser.Result;
+            ;
             var functions = ObjectParser.Parse(result);
 
             Form1[] forms = new Form1[functions.Count];
@@ -47,21 +48,23 @@ namespace LSystem
     // parse + convert objects to a list of tuples
     public static class ObjectParser
     {
-        public static List<(int applies, int angle, int length, StringBuilder rule)> Parse(List<object> objects)
+        public static List<(int applies, int angle, int length, StringBuilder rule, Color color)> Parse(List<object> objects)
         {
-            List<(int applies, int angle, int length, StringBuilder rule)> functions = new();
+            List<(int applies, int angle, int length, StringBuilder rule, Color color)> functions = new();
             foreach (object obj in objects)
             {
                 string func = obj.ToString();
                 func = func.Substring(1, func.Length - 2);
                 func = Regex.Replace(func, @"\s+", "");
                 string[] function = func.Split(',');
-                (int applies, int angle, int length, StringBuilder rule) tuple = new();
+                (int applies, int angle, int length, StringBuilder rule, Color color) tuple = new();
                 tuple.applies = int.Parse(function[0]);
                 tuple.angle = int.Parse(function[1]);
                 tuple.length = int.Parse(function[2]);
                 StringBuilder rule = new(function[3]);
                 tuple.rule = rule;
+                var temp = function[4].Substring(function[4].IndexOf("[") + 1, function[4].IndexOf("]") - function[4].IndexOf("[") - 1);
+                tuple.color = Color.FromName(temp);
 
                 functions.Add(tuple);
             }

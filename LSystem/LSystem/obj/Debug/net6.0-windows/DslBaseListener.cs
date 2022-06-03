@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from C:\Users\mariu\Desktop\LSystemProject\LSystem\LSystem\Dsl.g4 by ANTLR 4.6.6
+// Generated from S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\Dsl.g4 by ANTLR 4.6.6
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -73,6 +73,32 @@ public partial class DslBaseListener : IDslListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitFunction([NotNull] DslParser.FunctionContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.lstree"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLstree([NotNull] DslParser.LstreeContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.lstree"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLstree([NotNull] DslParser.LstreeContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.lsdragon"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLsdragon([NotNull] DslParser.LsdragonContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.lsdragon"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLsdragon([NotNull] DslParser.LsdragonContext context) { }
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="DslParser.freestyle"/>.
@@ -151,6 +177,19 @@ public partial class DslBaseListener : IDslListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitRules([NotNull] DslParser.RulesContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.color"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterColor([NotNull] DslParser.ColorContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.color"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitColor([NotNull] DslParser.ColorContext context) { }
 
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="DslParser.task"/>.

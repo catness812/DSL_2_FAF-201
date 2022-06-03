@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from C:\Users\mariu\Desktop\LSystemProject\LSystem\LSystem\Dsl.g4 by ANTLR 4.6.6
+// Generated from S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\Dsl.g4 by ANTLR 4.6.6
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -31,27 +31,27 @@ using DFA = Antlr4.Runtime.Dfa.DFA;
 [System.CLSCompliant(false)]
 public partial class DslParser : Parser {
 
-	public static List<object> Result = new List<object>();
+		public static List<object> Result = new List<object>();
 
-	public const int
+		public const int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		T__9=10, T__10=11, NUM=12, AXIOM=13;
+		T__9=10, T__10=11, T__11=12, NUM=13, AXIOM=14;
 	public const int
-		RULE_program = 0, RULE_line = 1, RULE_function = 2, RULE_freestyle = 3, 
-		RULE_axiom = 4, RULE_applies = 5, RULE_angle = 6, RULE_length = 7, RULE_rules = 8, 
-		RULE_task = 9, RULE_path = 10;
+		RULE_program = 0, RULE_line = 1, RULE_function = 2, RULE_lstree = 3, RULE_lsdragon = 4, 
+		RULE_freestyle = 5, RULE_axiom = 6, RULE_applies = 7, RULE_angle = 8, 
+		RULE_length = 9, RULE_rules = 10, RULE_color = 11, RULE_task = 12, RULE_path = 13;
 	public static readonly string[] ruleNames = {
-		"program", "line", "function", "freestyle", "axiom", "applies", "angle", 
-		"length", "rules", "task", "path"
+		"program", "line", "function", "lstree", "lsdragon", "freestyle", "axiom", 
+		"applies", "angle", "length", "rules", "color", "task", "path"
 	};
 
 	private static readonly string[] _LiteralNames = {
-		null, "'ls freestyle'", "'('", "'\"'", "','", "')'", "';'", "'{'", "':'", 
-		"'}'", "'['", "']'"
+		null, "'ls tree('", "');'", "'ls dragon('", "'ls freestyle'", "'('", "'\"'", 
+		"','", "'{'", "':'", "'}'", "'['", "']'"
 	};
 	private static readonly string[] _SymbolicNames = {
 		null, null, null, null, null, null, null, null, null, null, null, null, 
-		"NUM", "AXIOM"
+		null, "NUM", "AXIOM"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
 
@@ -139,20 +139,20 @@ public partial class DslParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 25;
+			State = 31;
 			_errHandler.Sync(this);
 			_la = _input.La(1);
-			while (_la==T__0) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__2) | (1L << T__3))) != 0)) {
 				{
 				{
-				State = 22; line();
+				State = 28; line();
 				}
 				}
-				State = 27;
+				State = 33;
 				_errHandler.Sync(this);
 				_la = _input.La(1);
 			}
-			State = 28; Match(Eof);
+			State = 34; Match(Eof);
 			}
 		}
 		catch (RecognitionException re) {
@@ -197,7 +197,7 @@ public partial class DslParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 30; function();
+			State = 36; function();
 			}
 		}
 		catch (RecognitionException re) {
@@ -214,6 +214,12 @@ public partial class DslParser : Parser {
 	public partial class FunctionContext : ParserRuleContext {
 		public FreestyleContext freestyle() {
 			return GetRuleContext<FreestyleContext>(0);
+		}
+		public LstreeContext lstree() {
+			return GetRuleContext<LstreeContext>(0);
+		}
+		public LsdragonContext lsdragon() {
+			return GetRuleContext<LsdragonContext>(0);
 		}
 		public FunctionContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -240,9 +246,123 @@ public partial class DslParser : Parser {
 		FunctionContext _localctx = new FunctionContext(_ctx, State);
 		EnterRule(_localctx, 4, RULE_function);
 		try {
+			State = 41;
+			_errHandler.Sync(this);
+			switch (_input.La(1)) {
+			case T__3:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 38; freestyle();
+				}
+				break;
+			case T__0:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 39; lstree();
+				}
+				break;
+			case T__2:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 40; lsdragon();
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.ReportError(this, re);
+			_errHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LstreeContext : ParserRuleContext {
+		public AppliesContext applies() {
+			return GetRuleContext<AppliesContext>(0);
+		}
+		public LstreeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_lstree; } }
+		public override void EnterRule(IParseTreeListener listener) {
+			IDslListener typedListener = listener as IDslListener;
+			if (typedListener != null) typedListener.EnterLstree(this);
+		}
+		public override void ExitRule(IParseTreeListener listener) {
+			IDslListener typedListener = listener as IDslListener;
+			if (typedListener != null) typedListener.ExitLstree(this);
+		}
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IDslVisitor<TResult> typedVisitor = visitor as IDslVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitLstree(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public LstreeContext lstree() {
+		LstreeContext _localctx = new LstreeContext(_ctx, State);
+		EnterRule(_localctx, 6, RULE_lstree);
+		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 32; freestyle();
+			State = 43; Match(T__0);
+			State = 44; applies();
+			State = 45; Match(T__1);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.ReportError(this, re);
+			_errHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class LsdragonContext : ParserRuleContext {
+		public AppliesContext applies() {
+			return GetRuleContext<AppliesContext>(0);
+		}
+		public LsdragonContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_lsdragon; } }
+		public override void EnterRule(IParseTreeListener listener) {
+			IDslListener typedListener = listener as IDslListener;
+			if (typedListener != null) typedListener.EnterLsdragon(this);
+		}
+		public override void ExitRule(IParseTreeListener listener) {
+			IDslListener typedListener = listener as IDslListener;
+			if (typedListener != null) typedListener.ExitLsdragon(this);
+		}
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IDslVisitor<TResult> typedVisitor = visitor as IDslVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitLsdragon(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public LsdragonContext lsdragon() {
+		LsdragonContext _localctx = new LsdragonContext(_ctx, State);
+		EnterRule(_localctx, 8, RULE_lsdragon);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 47; Match(T__2);
+			State = 48; applies();
+			State = 49; Match(T__1);
 			}
 		}
 		catch (RecognitionException re) {
@@ -272,6 +392,9 @@ public partial class DslParser : Parser {
 		public RulesContext rules() {
 			return GetRuleContext<RulesContext>(0);
 		}
+		public ColorContext color() {
+			return GetRuleContext<ColorContext>(0);
+		}
 		public FreestyleContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -286,43 +409,44 @@ public partial class DslParser : Parser {
 			if (typedListener != null) typedListener.ExitFreestyle(this);
 		}
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			object function;
-			IDslVisitor<TResult> typedVisitor = visitor as IDslVisitor<TResult>;
-			if (typedVisitor != null)
-            {
-				function = typedVisitor.VisitFreestyle(this);
-				Result.Add(function);
-				return (TResult) function;
+				object function;
+				IDslVisitor<TResult> typedVisitor = visitor as IDslVisitor<TResult>;
+				if (typedVisitor != null)
+				{
+					function = typedVisitor.VisitFreestyle(this);
+					Result.Add(function);
+					return (TResult) function;
+				}
+				else
+				{
+					return visitor.VisitChildren(this);
+				}
 			}
-            else
-            {
-				return visitor.VisitChildren(this);
-			}	
-		}
 	}
 
 	[RuleVersion(0)]
 	public FreestyleContext freestyle() {
 		FreestyleContext _localctx = new FreestyleContext(_ctx, State);
-		EnterRule(_localctx, 6, RULE_freestyle);
+		EnterRule(_localctx, 10, RULE_freestyle);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 34; Match(T__0);
-			State = 35; Match(T__1);
-			State = 36; Match(T__2);
-			State = 37; axiom();
-			State = 38; Match(T__2);
-			State = 39; Match(T__3);
-			State = 40; applies();
-			State = 41; Match(T__3);
-			State = 42; angle();
-			State = 43; Match(T__3);
-			State = 44; length();
-			State = 45; Match(T__3);
-			State = 46; rules(0);
-			State = 47; Match(T__4);
-			State = 48; Match(T__5);
+			State = 51; Match(T__3);
+			State = 52; Match(T__4);
+			State = 53; Match(T__5);
+			State = 54; axiom();
+			State = 55; Match(T__5);
+			State = 56; Match(T__6);
+			State = 57; applies();
+			State = 58; Match(T__6);
+			State = 59; angle();
+			State = 60; Match(T__6);
+			State = 61; length();
+			State = 62; Match(T__6);
+			State = 63; rules(0);
+			State = 64; Match(T__6);
+			State = 65; color();
+			State = 66; Match(T__1);
 			}
 		}
 		catch (RecognitionException re) {
@@ -361,11 +485,11 @@ public partial class DslParser : Parser {
 	[RuleVersion(0)]
 	public AxiomContext axiom() {
 		AxiomContext _localctx = new AxiomContext(_ctx, State);
-		EnterRule(_localctx, 8, RULE_axiom);
+		EnterRule(_localctx, 12, RULE_axiom);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 50; Match(AXIOM);
+			State = 68; Match(AXIOM);
 			}
 		}
 		catch (RecognitionException re) {
@@ -404,11 +528,11 @@ public partial class DslParser : Parser {
 	[RuleVersion(0)]
 	public AppliesContext applies() {
 		AppliesContext _localctx = new AppliesContext(_ctx, State);
-		EnterRule(_localctx, 10, RULE_applies);
+		EnterRule(_localctx, 14, RULE_applies);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 52; Match(NUM);
+			State = 70; Match(NUM);
 			}
 		}
 		catch (RecognitionException re) {
@@ -447,11 +571,11 @@ public partial class DslParser : Parser {
 	[RuleVersion(0)]
 	public AngleContext angle() {
 		AngleContext _localctx = new AngleContext(_ctx, State);
-		EnterRule(_localctx, 12, RULE_angle);
+		EnterRule(_localctx, 16, RULE_angle);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 54; Match(NUM);
+			State = 72; Match(NUM);
 			}
 		}
 		catch (RecognitionException re) {
@@ -490,11 +614,11 @@ public partial class DslParser : Parser {
 	[RuleVersion(0)]
 	public LengthContext length() {
 		LengthContext _localctx = new LengthContext(_ctx, State);
-		EnterRule(_localctx, 14, RULE_length);
+		EnterRule(_localctx, 18, RULE_length);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 56; Match(NUM);
+			State = 74; Match(NUM);
 			}
 		}
 		catch (RecognitionException re) {
@@ -548,19 +672,19 @@ public partial class DslParser : Parser {
 		int _parentState = State;
 		RulesContext _localctx = new RulesContext(_ctx, _parentState);
 		RulesContext _prevctx = _localctx;
-		int _startState = 16;
-		EnterRecursionRule(_localctx, 16, RULE_rules, _p);
+		int _startState = 20;
+		EnterRecursionRule(_localctx, 20, RULE_rules, _p);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			{
-			State = 59; task();
+			State = 77; task();
 			}
 			_ctx.stop = _input.Lt(-1);
-			State = 66;
+			State = 84;
 			_errHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(_input,1,_ctx);
+			_alt = Interpreter.AdaptivePredict(_input,2,_ctx);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.InvalidAltNumber ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) TriggerExitRuleEvent();
@@ -569,16 +693,16 @@ public partial class DslParser : Parser {
 					{
 					_localctx = new RulesContext(_parentctx, _parentState);
 					PushNewRecursionContext(_localctx, _startState, RULE_rules);
-					State = 61;
+					State = 79;
 					if (!(Precpred(_ctx, 1))) throw new FailedPredicateException(this, "Precpred(_ctx, 1)");
-					State = 62; Match(T__3);
-					State = 63; rules(2);
+					State = 80; Match(T__6);
+					State = 81; rules(2);
 					}
 					} 
 				}
-				State = 68;
+				State = 86;
 				_errHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(_input,1,_ctx);
+				_alt = Interpreter.AdaptivePredict(_input,2,_ctx);
 			}
 			}
 		}
@@ -589,6 +713,49 @@ public partial class DslParser : Parser {
 		}
 		finally {
 			UnrollRecursionContexts(_parentctx);
+		}
+		return _localctx;
+	}
+
+	public partial class ColorContext : ParserRuleContext {
+		public ITerminalNode AXIOM() { return GetToken(DslParser.AXIOM, 0); }
+		public ColorContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_color; } }
+		public override void EnterRule(IParseTreeListener listener) {
+			IDslListener typedListener = listener as IDslListener;
+			if (typedListener != null) typedListener.EnterColor(this);
+		}
+		public override void ExitRule(IParseTreeListener listener) {
+			IDslListener typedListener = listener as IDslListener;
+			if (typedListener != null) typedListener.ExitColor(this);
+		}
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IDslVisitor<TResult> typedVisitor = visitor as IDslVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitColor(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public ColorContext color() {
+		ColorContext _localctx = new ColorContext(_ctx, State);
+		EnterRule(_localctx, 22, RULE_color);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 87; Match(AXIOM);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.ReportError(this, re);
+			_errHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
 		}
 		return _localctx;
 	}
@@ -621,19 +788,19 @@ public partial class DslParser : Parser {
 	[RuleVersion(0)]
 	public TaskContext task() {
 		TaskContext _localctx = new TaskContext(_ctx, State);
-		EnterRule(_localctx, 18, RULE_task);
+		EnterRule(_localctx, 24, RULE_task);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 69; Match(T__6);
-			State = 70; Match(T__2);
-			State = 71; Match(AXIOM);
-			State = 72; Match(T__2);
-			State = 73; Match(T__7);
-			State = 74; Match(T__2);
-			State = 75; path(0);
-			State = 76; Match(T__2);
-			State = 77; Match(T__8);
+			State = 89; Match(T__7);
+			State = 90; Match(T__5);
+			State = 91; Match(AXIOM);
+			State = 92; Match(T__5);
+			State = 93; Match(T__8);
+			State = 94; Match(T__5);
+			State = 95; path(0);
+			State = 96; Match(T__5);
+			State = 97; Match(T__9);
 			}
 		}
 		catch (RecognitionException re) {
@@ -687,60 +854,60 @@ public partial class DslParser : Parser {
 		int _parentState = State;
 		PathContext _localctx = new PathContext(_ctx, _parentState);
 		PathContext _prevctx = _localctx;
-		int _startState = 20;
-		EnterRecursionRule(_localctx, 20, RULE_path, _p);
+		int _startState = 26;
+		EnterRecursionRule(_localctx, 26, RULE_path, _p);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 90;
+			State = 110;
 			_errHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(_input,2,_ctx) ) {
+			switch ( Interpreter.AdaptivePredict(_input,3,_ctx) ) {
 			case 1:
 				{
-				State = 80; axiom();
+				State = 100; axiom();
 				}
 				break;
 
 			case 2:
 				{
-				State = 81; Match(T__9);
-				State = 82; path(0);
-				State = 83; Match(T__10);
+				State = 101; Match(T__10);
+				State = 102; path(0);
+				State = 103; Match(T__11);
 				}
 				break;
 
 			case 3:
 				{
-				State = 85; Match(T__9);
-				State = 86; path(0);
-				State = 87; Match(T__10);
-				State = 88; path(2);
+				State = 105; Match(T__10);
+				State = 106; path(0);
+				State = 107; Match(T__11);
+				State = 108; path(2);
 				}
 				break;
 			}
 			_ctx.stop = _input.Lt(-1);
-			State = 105;
+			State = 125;
 			_errHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(_input,4,_ctx);
+			_alt = Interpreter.AdaptivePredict(_input,5,_ctx);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.InvalidAltNumber ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) TriggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					State = 103;
+					State = 123;
 					_errHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(_input,3,_ctx) ) {
+					switch ( Interpreter.AdaptivePredict(_input,4,_ctx) ) {
 					case 1:
 						{
 						_localctx = new PathContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_path);
-						State = 92;
+						State = 112;
 						if (!(Precpred(_ctx, 1))) throw new FailedPredicateException(this, "Precpred(_ctx, 1)");
-						State = 93; Match(T__9);
-						State = 94; path(0);
-						State = 95; Match(T__10);
-						State = 96; path(2);
+						State = 113; Match(T__10);
+						State = 114; path(0);
+						State = 115; Match(T__11);
+						State = 116; path(2);
 						}
 						break;
 
@@ -748,19 +915,19 @@ public partial class DslParser : Parser {
 						{
 						_localctx = new PathContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_path);
-						State = 98;
+						State = 118;
 						if (!(Precpred(_ctx, 3))) throw new FailedPredicateException(this, "Precpred(_ctx, 3)");
-						State = 99; Match(T__9);
-						State = 100; path(0);
-						State = 101; Match(T__10);
+						State = 119; Match(T__10);
+						State = 120; path(0);
+						State = 121; Match(T__11);
 						}
 						break;
 					}
 					} 
 				}
-				State = 107;
+				State = 127;
 				_errHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(_input,4,_ctx);
+				_alt = Interpreter.AdaptivePredict(_input,5,_ctx);
 			}
 			}
 		}
@@ -777,9 +944,9 @@ public partial class DslParser : Parser {
 
 	public override bool Sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
 		switch (ruleIndex) {
-		case 8: return rules_sempred((RulesContext)_localctx, predIndex);
+		case 10: return rules_sempred((RulesContext)_localctx, predIndex);
 
-		case 10: return path_sempred((PathContext)_localctx, predIndex);
+		case 13: return path_sempred((PathContext)_localctx, predIndex);
 		}
 		return true;
 	}
@@ -799,40 +966,46 @@ public partial class DslParser : Parser {
 	}
 
 	public static readonly string _serializedATN =
-		"\x3\xAF6F\x8320\x479D\xB75C\x4880\x1605\x191C\xAB37\x3\xFo\x4\x2\t\x2"+
-		"\x4\x3\t\x3\x4\x4\t\x4\x4\x5\t\x5\x4\x6\t\x6\x4\a\t\a\x4\b\t\b\x4\t\t"+
-		"\t\x4\n\t\n\x4\v\t\v\x4\f\t\f\x3\x2\a\x2\x1A\n\x2\f\x2\xE\x2\x1D\v\x2"+
-		"\x3\x2\x3\x2\x3\x3\x3\x3\x3\x4\x3\x4\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5\x3"+
-		"\x5\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5\x3\x5\x3\x6"+
-		"\x3\x6\x3\a\x3\a\x3\b\x3\b\x3\t\x3\t\x3\n\x3\n\x3\n\x3\n\x3\n\x3\n\a\n"+
-		"\x43\n\n\f\n\xE\n\x46\v\n\x3\v\x3\v\x3\v\x3\v\x3\v\x3\v\x3\v\x3\v\x3\v"+
-		"\x3\v\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\x5\f]\n\f"+
-		"\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\x3\f\a\fj\n\f\f\f\xE"+
-		"\fm\v\f\x3\f\x2\x2\x4\x12\x16\r\x2\x2\x4\x2\x6\x2\b\x2\n\x2\f\x2\xE\x2"+
-		"\x10\x2\x12\x2\x14\x2\x16\x2\x2\x2i\x2\x1B\x3\x2\x2\x2\x4 \x3\x2\x2\x2"+
-		"\x6\"\x3\x2\x2\x2\b$\x3\x2\x2\x2\n\x34\x3\x2\x2\x2\f\x36\x3\x2\x2\x2\xE"+
-		"\x38\x3\x2\x2\x2\x10:\x3\x2\x2\x2\x12<\x3\x2\x2\x2\x14G\x3\x2\x2\x2\x16"+
-		"\\\x3\x2\x2\x2\x18\x1A\x5\x4\x3\x2\x19\x18\x3\x2\x2\x2\x1A\x1D\x3\x2\x2"+
-		"\x2\x1B\x19\x3\x2\x2\x2\x1B\x1C\x3\x2\x2\x2\x1C\x1E\x3\x2\x2\x2\x1D\x1B"+
-		"\x3\x2\x2\x2\x1E\x1F\a\x2\x2\x3\x1F\x3\x3\x2\x2\x2 !\x5\x6\x4\x2!\x5\x3"+
-		"\x2\x2\x2\"#\x5\b\x5\x2#\a\x3\x2\x2\x2$%\a\x3\x2\x2%&\a\x4\x2\x2&\'\a"+
-		"\x5\x2\x2\'(\x5\n\x6\x2()\a\x5\x2\x2)*\a\x6\x2\x2*+\x5\f\a\x2+,\a\x6\x2"+
-		"\x2,-\x5\xE\b\x2-.\a\x6\x2\x2./\x5\x10\t\x2/\x30\a\x6\x2\x2\x30\x31\x5"+
-		"\x12\n\x2\x31\x32\a\a\x2\x2\x32\x33\a\b\x2\x2\x33\t\x3\x2\x2\x2\x34\x35"+
-		"\a\xF\x2\x2\x35\v\x3\x2\x2\x2\x36\x37\a\xE\x2\x2\x37\r\x3\x2\x2\x2\x38"+
-		"\x39\a\xE\x2\x2\x39\xF\x3\x2\x2\x2:;\a\xE\x2\x2;\x11\x3\x2\x2\x2<=\b\n"+
-		"\x1\x2=>\x5\x14\v\x2>\x44\x3\x2\x2\x2?@\f\x3\x2\x2@\x41\a\x6\x2\x2\x41"+
-		"\x43\x5\x12\n\x4\x42?\x3\x2\x2\x2\x43\x46\x3\x2\x2\x2\x44\x42\x3\x2\x2"+
-		"\x2\x44\x45\x3\x2\x2\x2\x45\x13\x3\x2\x2\x2\x46\x44\x3\x2\x2\x2GH\a\t"+
-		"\x2\x2HI\a\x5\x2\x2IJ\a\xF\x2\x2JK\a\x5\x2\x2KL\a\n\x2\x2LM\a\x5\x2\x2"+
-		"MN\x5\x16\f\x2NO\a\x5\x2\x2OP\a\v\x2\x2P\x15\x3\x2\x2\x2QR\b\f\x1\x2R"+
-		"]\x5\n\x6\x2ST\a\f\x2\x2TU\x5\x16\f\x2UV\a\r\x2\x2V]\x3\x2\x2\x2WX\a\f"+
-		"\x2\x2XY\x5\x16\f\x2YZ\a\r\x2\x2Z[\x5\x16\f\x4[]\x3\x2\x2\x2\\Q\x3\x2"+
-		"\x2\x2\\S\x3\x2\x2\x2\\W\x3\x2\x2\x2]k\x3\x2\x2\x2^_\f\x3\x2\x2_`\a\f"+
-		"\x2\x2`\x61\x5\x16\f\x2\x61\x62\a\r\x2\x2\x62\x63\x5\x16\f\x4\x63j\x3"+
-		"\x2\x2\x2\x64\x65\f\x5\x2\x2\x65\x66\a\f\x2\x2\x66g\x5\x16\f\x2gh\a\r"+
-		"\x2\x2hj\x3\x2\x2\x2i^\x3\x2\x2\x2i\x64\x3\x2\x2\x2jm\x3\x2\x2\x2ki\x3"+
-		"\x2\x2\x2kl\x3\x2\x2\x2l\x17\x3\x2\x2\x2mk\x3\x2\x2\x2\a\x1B\x44\\ik";
+		"\x3\xAF6F\x8320\x479D\xB75C\x4880\x1605\x191C\xAB37\x3\x10\x83\x4\x2\t"+
+		"\x2\x4\x3\t\x3\x4\x4\t\x4\x4\x5\t\x5\x4\x6\t\x6\x4\a\t\a\x4\b\t\b\x4\t"+
+		"\t\t\x4\n\t\n\x4\v\t\v\x4\f\t\f\x4\r\t\r\x4\xE\t\xE\x4\xF\t\xF\x3\x2\a"+
+		"\x2 \n\x2\f\x2\xE\x2#\v\x2\x3\x2\x3\x2\x3\x3\x3\x3\x3\x4\x3\x4\x3\x4\x5"+
+		"\x4,\n\x4\x3\x5\x3\x5\x3\x5\x3\x5\x3\x6\x3\x6\x3\x6\x3\x6\x3\a\x3\a\x3"+
+		"\a\x3\a\x3\a\x3\a\x3\a\x3\a\x3\a\x3\a\x3\a\x3\a\x3\a\x3\a\x3\a\x3\a\x3"+
+		"\a\x3\b\x3\b\x3\t\x3\t\x3\n\x3\n\x3\v\x3\v\x3\f\x3\f\x3\f\x3\f\x3\f\x3"+
+		"\f\a\fU\n\f\f\f\xE\fX\v\f\x3\r\x3\r\x3\xE\x3\xE\x3\xE\x3\xE\x3\xE\x3\xE"+
+		"\x3\xE\x3\xE\x3\xE\x3\xE\x3\xF\x3\xF\x3\xF\x3\xF\x3\xF\x3\xF\x3\xF\x3"+
+		"\xF\x3\xF\x3\xF\x3\xF\x5\xFq\n\xF\x3\xF\x3\xF\x3\xF\x3\xF\x3\xF\x3\xF"+
+		"\x3\xF\x3\xF\x3\xF\x3\xF\x3\xF\a\xF~\n\xF\f\xF\xE\xF\x81\v\xF\x3\xF\x2"+
+		"\x2\x4\x16\x1C\x10\x2\x2\x4\x2\x6\x2\b\x2\n\x2\f\x2\xE\x2\x10\x2\x12\x2"+
+		"\x14\x2\x16\x2\x18\x2\x1A\x2\x1C\x2\x2\x2|\x2!\x3\x2\x2\x2\x4&\x3\x2\x2"+
+		"\x2\x6+\x3\x2\x2\x2\b-\x3\x2\x2\x2\n\x31\x3\x2\x2\x2\f\x35\x3\x2\x2\x2"+
+		"\xE\x46\x3\x2\x2\x2\x10H\x3\x2\x2\x2\x12J\x3\x2\x2\x2\x14L\x3\x2\x2\x2"+
+		"\x16N\x3\x2\x2\x2\x18Y\x3\x2\x2\x2\x1A[\x3\x2\x2\x2\x1Cp\x3\x2\x2\x2\x1E"+
+		" \x5\x4\x3\x2\x1F\x1E\x3\x2\x2\x2 #\x3\x2\x2\x2!\x1F\x3\x2\x2\x2!\"\x3"+
+		"\x2\x2\x2\"$\x3\x2\x2\x2#!\x3\x2\x2\x2$%\a\x2\x2\x3%\x3\x3\x2\x2\x2&\'"+
+		"\x5\x6\x4\x2\'\x5\x3\x2\x2\x2(,\x5\f\a\x2),\x5\b\x5\x2*,\x5\n\x6\x2+("+
+		"\x3\x2\x2\x2+)\x3\x2\x2\x2+*\x3\x2\x2\x2,\a\x3\x2\x2\x2-.\a\x3\x2\x2."+
+		"/\x5\x10\t\x2/\x30\a\x4\x2\x2\x30\t\x3\x2\x2\x2\x31\x32\a\x5\x2\x2\x32"+
+		"\x33\x5\x10\t\x2\x33\x34\a\x4\x2\x2\x34\v\x3\x2\x2\x2\x35\x36\a\x6\x2"+
+		"\x2\x36\x37\a\a\x2\x2\x37\x38\a\b\x2\x2\x38\x39\x5\xE\b\x2\x39:\a\b\x2"+
+		"\x2:;\a\t\x2\x2;<\x5\x10\t\x2<=\a\t\x2\x2=>\x5\x12\n\x2>?\a\t\x2\x2?@"+
+		"\x5\x14\v\x2@\x41\a\t\x2\x2\x41\x42\x5\x16\f\x2\x42\x43\a\t\x2\x2\x43"+
+		"\x44\x5\x18\r\x2\x44\x45\a\x4\x2\x2\x45\r\x3\x2\x2\x2\x46G\a\x10\x2\x2"+
+		"G\xF\x3\x2\x2\x2HI\a\xF\x2\x2I\x11\x3\x2\x2\x2JK\a\xF\x2\x2K\x13\x3\x2"+
+		"\x2\x2LM\a\xF\x2\x2M\x15\x3\x2\x2\x2NO\b\f\x1\x2OP\x5\x1A\xE\x2PV\x3\x2"+
+		"\x2\x2QR\f\x3\x2\x2RS\a\t\x2\x2SU\x5\x16\f\x4TQ\x3\x2\x2\x2UX\x3\x2\x2"+
+		"\x2VT\x3\x2\x2\x2VW\x3\x2\x2\x2W\x17\x3\x2\x2\x2XV\x3\x2\x2\x2YZ\a\x10"+
+		"\x2\x2Z\x19\x3\x2\x2\x2[\\\a\n\x2\x2\\]\a\b\x2\x2]^\a\x10\x2\x2^_\a\b"+
+		"\x2\x2_`\a\v\x2\x2`\x61\a\b\x2\x2\x61\x62\x5\x1C\xF\x2\x62\x63\a\b\x2"+
+		"\x2\x63\x64\a\f\x2\x2\x64\x1B\x3\x2\x2\x2\x65\x66\b\xF\x1\x2\x66q\x5\xE"+
+		"\b\x2gh\a\r\x2\x2hi\x5\x1C\xF\x2ij\a\xE\x2\x2jq\x3\x2\x2\x2kl\a\r\x2\x2"+
+		"lm\x5\x1C\xF\x2mn\a\xE\x2\x2no\x5\x1C\xF\x4oq\x3\x2\x2\x2p\x65\x3\x2\x2"+
+		"\x2pg\x3\x2\x2\x2pk\x3\x2\x2\x2q\x7F\x3\x2\x2\x2rs\f\x3\x2\x2st\a\r\x2"+
+		"\x2tu\x5\x1C\xF\x2uv\a\xE\x2\x2vw\x5\x1C\xF\x4w~\x3\x2\x2\x2xy\f\x5\x2"+
+		"\x2yz\a\r\x2\x2z{\x5\x1C\xF\x2{|\a\xE\x2\x2|~\x3\x2\x2\x2}r\x3\x2\x2\x2"+
+		"}x\x3\x2\x2\x2~\x81\x3\x2\x2\x2\x7F}\x3\x2\x2\x2\x7F\x80\x3\x2\x2\x2\x80"+
+		"\x1D\x3\x2\x2\x2\x81\x7F\x3\x2\x2\x2\b!+Vp}\x7F";
 	public static readonly ATN _ATN =
 		new ATNDeserializer().Deserialize(_serializedATN.ToCharArray());
 }

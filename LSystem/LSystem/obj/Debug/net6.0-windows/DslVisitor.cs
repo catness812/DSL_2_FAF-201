@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from C:\Users\mariu\Desktop\LSystemProject\LSystem\LSystem\Dsl.g4 by ANTLR 4.6.6
+// Generated from S:\MB\Univer\ANUL II\Classes II\DDSL\LSystemParser\LSystem\LSystem\Dsl.g4 by ANTLR 4.6.6
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -54,6 +54,20 @@ public interface IDslVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitFunction([NotNull] DslParser.FunctionContext context);
 
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="DslParser.lstree"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLstree([NotNull] DslParser.LstreeContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DslParser.lsdragon"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLsdragon([NotNull] DslParser.LsdragonContext context);
+
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="DslParser.freestyle"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -94,6 +108,13 @@ public interface IDslVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitRules([NotNull] DslParser.RulesContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DslParser.color"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitColor([NotNull] DslParser.ColorContext context);
 
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="DslParser.task"/>.
