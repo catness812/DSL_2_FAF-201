@@ -54,6 +54,72 @@ public interface IDslListener : IParseTreeListener {
 	void ExitLine([NotNull] DslParser.LineContext context);
 
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.forLoop"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterForLoop([NotNull] DslParser.ForLoopContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.forLoop"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitForLoop([NotNull] DslParser.ForLoopContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.start"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterStart([NotNull] DslParser.StartContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.start"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitStart([NotNull] DslParser.StartContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.type"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterType([NotNull] DslParser.TypeContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.type"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitType([NotNull] DslParser.TypeContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.name"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterName([NotNull] DslParser.NameContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.name"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitName([NotNull] DslParser.NameContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.end"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterEnd([NotNull] DslParser.EndContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.end"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitEnd([NotNull] DslParser.EndContext context);
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.incrementSize"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterIncrementSize([NotNull] DslParser.IncrementSizeContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.incrementSize"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitIncrementSize([NotNull] DslParser.IncrementSizeContext context);
+
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="DslParser.function"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

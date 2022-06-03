@@ -62,6 +62,84 @@ public partial class DslBaseListener : IDslListener {
 	public virtual void ExitLine([NotNull] DslParser.LineContext context) { }
 
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.forLoop"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterForLoop([NotNull] DslParser.ForLoopContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.forLoop"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitForLoop([NotNull] DslParser.ForLoopContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.start"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterStart([NotNull] DslParser.StartContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.start"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitStart([NotNull] DslParser.StartContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.type"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterType([NotNull] DslParser.TypeContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.type"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitType([NotNull] DslParser.TypeContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.name"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterName([NotNull] DslParser.NameContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.name"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitName([NotNull] DslParser.NameContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.end"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterEnd([NotNull] DslParser.EndContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.end"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitEnd([NotNull] DslParser.EndContext context) { }
+
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="DslParser.incrementSize"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterIncrementSize([NotNull] DslParser.IncrementSizeContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="DslParser.incrementSize"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitIncrementSize([NotNull] DslParser.IncrementSizeContext context) { }
+
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="DslParser.function"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>

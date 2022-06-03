@@ -1,3 +1,4 @@
+using System.Drawing.Imaging;
 using Nakov.TurtleGraphics;
 using System.Text;
 
@@ -14,8 +15,6 @@ namespace LSystem
         {
             InitializeComponent();
             Activated += Form2_Activated;
-            //openFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
-            //saveFileDialog1.Filter = "Images|*.png;*.bmp;*.jpg";
             _angle = function.angle;
             _length = function.length;
             _rule = function.rule;
@@ -59,11 +58,12 @@ namespace LSystem
                 }
             }
 
-            /*using (Bitmap bmp = new Bitmap(this.Width, this.Height))
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            using (Bitmap bmp = new Bitmap(this.Width, this.Height))
             {
                 DrawToBitmap(bmp, new Rectangle(Point.Empty, bmp.Size));
-                bmp.Save(@"C:\Users\Admin\Desktop\lsystems.png", ImageFormat.Png);
-            }*/
+                bmp.Save(path + "\\lsystems-" + Guid.NewGuid() + ".png", ImageFormat.Png);
+            }
         }
     }
 }

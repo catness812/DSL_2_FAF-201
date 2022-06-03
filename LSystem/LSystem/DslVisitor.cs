@@ -10,6 +10,7 @@ namespace LSystem
     public class DslVisitor : DslBaseVisitor<object?>
     {
         private Dictionary<int, (string axiom, int applies, int angle, int length, StringBuilder rule, Color color)> freestyles = new();
+
         public override object? VisitFreestyle(DslParser.FreestyleContext context)
         {
             (string axiom, int applies, int angle, int length, StringBuilder rule, Color color) freestyle;
@@ -31,7 +32,7 @@ namespace LSystem
                 throw new Exception("The angle values must be between 0 and 360 inclusive.");
             }
 
-            // length -> lenght of each unit to be drawn
+            // length -> length of each unit to be drawn
             freestyle.length = int.Parse(context.length().GetText());
 
             // rules
@@ -52,7 +53,9 @@ namespace LSystem
             // add the current valid instance of freestyle function (its values) to dictionary
             freestyles.Add(freestyles.Count(), freestyle);
 
-            return new ValueTuple<int, int, int, StringBuilder, Color>(freestyle.applies, freestyle.angle, freestyle.length, freestyle.rule, freestyle.color);
+            var result = new ValueTuple<int, int, int, StringBuilder, Color>(freestyle.applies, freestyle.angle, freestyle.length, freestyle.rule, freestyle.color);
+
+            return result;
             ;
         }
 
@@ -120,8 +123,70 @@ namespace LSystem
 
         public override object VisitLstree(DslParser.LstreeContext context)
         {
-            Console.WriteLine(context.GetText());
-            return base.VisitLstree(context);
+            var axiom = "0";
+            var angle = 45;
+            var length = 5;
+            var applies = int.Parse(context.applies().GetText());
+            var rules = "{\"1\":\"11\"},{\"0\":\"1[-0]+0\"}";
+            dynamic color = context.color();
+            if (color != null)
+            {
+                color = Color.FromName(color.GetText());
+            }
+            else
+            {
+                color = Color.Blue;
+            }
+
+            var rule = Parse(axiom, applies, rules);
+            return new ValueTuple<int, int, int, StringBuilder, Color>(applies, angle, length, rule, color);
+        }
+
+        public override object VisitLsdragon([NotNull] DslParser.LsdragonContext context)
+        {
+            var axiom = "F";
+            var angle = 90;
+            var length = 5;
+            var applies = int.Parse(context.applies().GetText());
+            var rules = "{\"F\":\"F+G\"},{\"G\":\"F-G\"}";
+            dynamic color = context.color();
+            if (color != null)
+            {
+                color = Color.FromName(color.GetText());
+            }
+            else
+            {
+                color = Color.Blue;
+            }
+
+            var rule = Parse(axiom, applies, rules);
+            return new ValueTuple<int, int, int, StringBuilder, Color>(applies, angle, length, rule, color);
+        }
+
+        public override object VisitForLoop([NotNull] DslParser.ForLoopContext context)
+        {
+            var start = 0;
+            var end = 0;
+            int.TryParse(context.start().GetText().Substring(context.start().GetText().IndexOf('=') + 1), out start);
+            int.TryParse(context.end().GetText().Substring(context.end().GetText().IndexOf('<') + 1), out end);
+            var increment = context.incrementSize().GetText();
+            var forLength = context.function().Length;
+
+            if (increment.Contains("++") && start < end)
+            {
+                if (start < end)
+                {
+                    for (int j = start; j < end - 1; j++)
+                    {
+                        for (int i = 0; i < forLength; i++)
+                        {
+                            var obj = this.Visit(context.function(i));
+                        }
+                    }
+                }
+            }
+
+            return base.VisitForLoop(context);
         }
     }
 }

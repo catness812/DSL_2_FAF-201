@@ -47,6 +47,48 @@ public interface IDslVisitor<Result> : IParseTreeVisitor<Result> {
 	Result VisitLine([NotNull] DslParser.LineContext context);
 
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="DslParser.forLoop"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitForLoop([NotNull] DslParser.ForLoopContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DslParser.start"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitStart([NotNull] DslParser.StartContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DslParser.type"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitType([NotNull] DslParser.TypeContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DslParser.name"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitName([NotNull] DslParser.NameContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DslParser.end"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitEnd([NotNull] DslParser.EndContext context);
+
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="DslParser.incrementSize"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIncrementSize([NotNull] DslParser.IncrementSizeContext context);
+
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="DslParser.function"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
