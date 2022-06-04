@@ -1,4 +1,11 @@
 # Domain-Specific Language for *Lindenmayer Systems*
+### Table of contents
+1. [Project Purpose and Description](#1)
+2. [Language Grammar](#2)
+3. [Grammar Description](#3)
+4. [Program Examples and Output](#4)
+
+<a name="1"></a>
 ## Project Purpose and Description
 This project focuses on creating a DSL that will generate and design fractals, fractal plants, and architectural geometries of different colors, dimensions, using Lindenmayer systems, otherwise known as L-systems.
 
@@ -10,6 +17,7 @@ The main criterion for any source code is that a set of statements separated by 
 
 The DSL's general method is as follows: source code is separated into tokens, which are then processed by a parser to locate parser rule matches. All rules and tokens are described in a particular grammar file, which is then processed by ANTLR to generate lexer, parser, and listener files. The flow of the language is always the same: it executes each command one by one, one at a time, from top to bottom. The program will provide an appropriate error notice if there is an unknown syntax or semantic validation issue.
 
+<a name="2"></a>
 ## Language Grammar
 ```
 G = (Vn, Vt, S, P):
@@ -47,9 +55,9 @@ P = { <program> → <ls freestyle>; | <ls tree>; | <ls dragon>; | <define>; | <f
 
 <applies> → [1-9] | [1-9]<num>
 <num> → [0-9] | [0-9]<num>
+<color> → red | green
 
 <angle> → [0-9] | [1-9][0-9] | [1-2][0-9][0-9] | 3[0-5][0-9] | 360
-
 <length> → [0-9] | [1-9][0-9] | 100 
 
 <rules> → <rule> | <rule>,<rules>
@@ -73,6 +81,8 @@ P = { <program> → <ls freestyle>; | <ls tree>; | <ls dragon>; | <define>; | <f
 <statement> → <statement> | <num> | ”<X>” | ’<short>’
 }
 ```
+
+<a name="3"></a>
 ## Grammar Description
 -	define **variables**:\
 `<type>` - data type of variable\
@@ -93,7 +103,8 @@ Supported commands:\
   `]` : end branch
 
 -	***ls tree***/***ls dragon***: functions that generate 2 examples of L-systems designs\
-`<num>` - The number of recursions
+`<num>` - The number of recursions\
+`<color>` - The color of the output (optional parameter; default color - blue)
 
 -	***for*** statement:\
 `<A>` - Initialization\
@@ -103,10 +114,24 @@ Supported commands:\
 -	***if*** statement:\
 `<expression>` - Condition
 
-
-## Program Example and Output
+<a name="4"></a>
+## Program Examples and Output
 ```
 ls freestyle(”X”, 6, 25, 10,{”X”:  ”f−[[X]+X]+f[+fX]−X”, ”f”:  ”ff”});
 ```
-![l30](https://user-images.githubusercontent.com/91728316/157959734-df7844f3-7e7e-4912-add3-b50f61da069b.png)
+<img width="280" alt="s0" src="https://user-images.githubusercontent.com/91728316/171996531-097bd796-5f79-42b2-ac5d-f4036ecdc15f.png">
 
+```
+ls tree(8);
+```
+<img width="280" alt="s1" src="https://user-images.githubusercontent.com/91728316/171996623-591b98bd-bc2e-4007-a7bd-1238a1889486.png">
+
+```
+ls tree(8, green);
+```
+<img width="280" alt="s2" src="https://user-images.githubusercontent.com/91728316/171996630-240ab6d9-7730-4ab1-bfbb-b21766c96463.png">
+
+```
+ls dragon(12, red);
+```
+<img width="280" alt="s3" src="https://user-images.githubusercontent.com/91728316/171996692-22497588-6980-4ace-a6ab-791ca50fc174.png">
