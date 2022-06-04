@@ -55,7 +55,7 @@ P = { <program> → <ls freestyle>; | <ls tree>; | <ls dragon>; | <define>; | <f
 
 <applies> → [1-9] | [1-9]<num>
 <num> → [0-9] | [0-9]<num>
-<color> → red | green
+<color> → red | green | aquamrine | ...
 
 <angle> → [0-9] | [1-9][0-9] | [1-2][0-9][0-9] | 3[0-5][0-9] | 360
 <length> → [0-9] | [1-9][0-9] | 100 
