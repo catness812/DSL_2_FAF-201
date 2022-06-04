@@ -102,7 +102,7 @@ Supported commands:\
   `[` : start branch\
   `]` : end branch
 
--	***ls tree***/***ls dragon***: functions that generate 2 examples of L-systems designs\
+-	***ls tree*** / ***ls dragon***: functions that generate 2 examples of L-systems designs\
 `<num>` - The number of recursions\
 `<color>` - The color of the output (optional parameter; default color - blue)
 
